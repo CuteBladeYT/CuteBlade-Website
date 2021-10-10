@@ -1,0 +1,181 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/comfortaa.ttf);
+}
+@font-face {
+    font-family: Amatic SC;
+    src: url(../fonts/amaticsc.ttf);
+}
+@font-face {
+    font-family: FFF;
+    src: url(../fonts/fff.ttf);
+}
+@font-face {
+    font-family: Galactic;
+    src: url(../fonts/sga.ttf);
+}
+
+body {
+    background-image: url(../images/ZZZ_bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    user-select: none;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+pre {
+    font-family: inherit;
+}
+button {
+    border: inherit;
+    color: inherit;
+    background: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#header {
+    background-color: rgb(15, 15, 15);
+    border-bottom: 0.5vh white solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    z-index: 1;
+}
+#header_content {
+    color: white;
+    font-family: Comfortaa;
+    font-size: 5vh;
+    position: relative;
+    transform: translateY(65%) translateX(5%);
+}
+.header-buttons {
+    position: absolute;
+    right: 10%;
+    top: 3.5vh;
+}
+.header-icon {
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+}
+.header-button {
+    background: none;
+    color: white;
+    border: none;
+    border-bottom: 0.3vh white solid;
+    border-radius: 1vh;
+    font-size: inherit;
+    transition: 50ms ease;
+}
+.header-button:hover {
+    border-bottom: 0.3vh blue solid;
+}
+
+#content {
+    background-color: rgb(22, 22, 22);
+    border-left: 0.3vw white solid;
+    border-right: 0.3vw white solid;
+    color: white;
+    font-family: Comfortaa;
+    font-size: 2vh;
+    z-index: 2;
+    position: absolute;
+    top: 15.5vh;
+    left: 5vw;
+    width: 90vw;
+    height: calc(100vh - 15.5vh);
+    contain: content;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: 200ms ease;
+}
+
+#discordEmbed {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+}
+
+.socialImg {
+    width: 2vh;
+    height: 2vh;
+}
+.projectsIcon {
+    width: 3vh;
+    height: 3vh;
+}
+
+#mobile_headerButtons {
+    display: none;
+}
+
+@media screen and (max-width:481px) {
+
+    #mobile_headerButtons {
+        position: absolute;
+        display: unset;
+        top: 2vh;
+        right: 10vw;
+        width: 10vh;
+        height: 10vh;
+        z-index: 9999;
+    }
+
+    #header {
+        background-color: rgb(15, 15, 15);
+        border-bottom: 0.5vh white solid;
+        position: fixed;
+        top: 0;
+        left: 0vw;
+        width: 100vw;
+        height: 15vh;
+        z-index: 1;
+    }
+    .header-buttons {
+        display: none;
+        position: absolute;
+        transform: translateX(0%);
+        top: 10vh;
+        width: 90vw;
+        z-index: 99;
+        font-size: 5vh;
+    }
+    .header-button {
+        background-color: black;
+        color: white;
+        border-bottom: 1vw white solid;
+        border-radius: 1vh;
+        display: grid;
+        width: 90vw;
+        position: relative;
+        top: 5vh;
+        margin: 0 auto;
+        font-size: 5vh;
+    }
+
+    #content {
+        background-color: rgb(22, 22, 22);
+        color: white;
+        font-family: Comfortaa;
+        font-size: 2vh;
+        z-index: 2;
+        position: absolute;
+        top: 15.5vh;
+        left: 0vw;
+        width: 100vw;
+        height: 100vh;
+        contain: content;
+        overflow: scroll;
+    }
+
+    #discordEmbed {
+        display: none;
+    }
+}
